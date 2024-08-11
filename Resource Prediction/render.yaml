@@ -3,4 +3,4 @@ services:
     env: python
     buildCommand:  pip install -r requirements.txt
     startCommand:  python app.py
-    port: 5000  # Specify the port your app will run on
+    port: 8080  # Specify the port your app will run on
