@@ -1,6 +1,6 @@
 services:
   - name: flask-app
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -b 0.0.0.0:8080 app:app
+    buildCommand: cd "Resource prediction" && pip install -r requirements.txt
+    startCommand: cd "Resource prediction" && gunicorn -b 0.0.0.0:8080 app:app
     port: 8080
