@@ -63,5 +63,5 @@ def _build_cors_prelight_response():
     return response
 
 if __name__ == '__main__':
-    port = 8080 # Use the environment variable PORT
+    port = int(os.environ.get('PORT', 8080))  # Use the environment variable PORT
     app.run(host='0.0.0.0', port=port, debug=True)
