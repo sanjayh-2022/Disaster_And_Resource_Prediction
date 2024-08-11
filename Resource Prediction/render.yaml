@@ -1,5 +1,6 @@
 services:
   - name: flask-app
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    buildCommand: cd "Resource prediction" && pip install -r requirements.txt
+    startCommand: cd "Resource prediction" && python app.py
+    port: 5000  # Specify the port your app will run on
