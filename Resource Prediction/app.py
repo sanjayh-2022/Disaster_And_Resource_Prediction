@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import CORS from flask_cors
 from model import predict_resource_needs  # Import the function from model.py
