@@ -1,6 +1,6 @@
 services:
   - name: flask-app
     env: python
-    buildCommand:  pip install -r requirements.txt
-    startCommand:  python app.py
-    port: 8080  # Specify the port your app will run on
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:8080 app:app
+    port: 8080
