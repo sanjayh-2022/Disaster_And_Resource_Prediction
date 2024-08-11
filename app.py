@@ -4,7 +4,7 @@ from flask_cors import CORS  # Import CORS from flask_cors
 from model import predict_resource_needs  # Import the function from model.py
 
 app = Flask(__name__)
-CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000", "supports_credentials": True}})
 
 @app.route('/predict', methods=['POST', 'OPTIONS'])  # Allow OPTIONS method
 def predict():
